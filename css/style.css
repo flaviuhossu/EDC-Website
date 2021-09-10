@@ -1,0 +1,123 @@
+@import url('../css/fonts.css');
+:root {
+  /* Coolors palette */
+  /* https://coolors.co/d6d6d6-f5f410-ffd100-202020-333533 */
+  --light-gray: #d6d6d6;
+  --lemon: #f5f410;
+  --cyber-yellow: #ffd100;
+  --eerie-black: #202020;
+  --jet: #333533;
+
+  /* CSS VARS */
+  --Staat: Staat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  --fade: linearGradient(90deg, #f83600 0%, #f9d423 100%);
+}
+
+/* Gradients */
+
+/* End of Gradients */
+
+/* Defaults */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* GLOBAL CLASSES */
+
+header {
+  background-color: var(--lemon);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: var(--lemon);
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  /* flex wrap colapseaza Social Icons sub Logo */
+  flex-wrap: wrap;
+}
+.nav .nav-menu {
+  justify-content: space-between;
+  background-color: var(--lemon);
+}
+ul {
+  list-style-type: none;
+}
+
+/* END of GLOBAL CLASSES */
+
+/* Navigation */
+nav {
+  background-color: var(--lemon);
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+/* Linkuri */
+.nav .nav-items {
+  display: flex;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  font-family: var(--Staat);
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  font-size: 2rem;
+  position: relative;
+  text-transform: capitalize;
+  background-color: var(--lemon);
+}
+.nav .nav-items .nav-link :hover {
+  background-color: var(--eerie-black);
+  color: var(--cyber-yellow);
+}
+
+/* Bars */
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+.nav .toggle-collapse .toggle-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+.nav .toggle-collapse .toggle-icon i {
+  font-size: 1.4rem;
+  color: var(--eerie-black);
+}
+.toggle {
+  height: 30rem;
+}
+
+/* Social */
+.nav .social {
+  background-color: var(--lemon);
+  padding: 1.4rem 0;
+  color: blue;
+  font-size: 2rem;
+}
+/* END of Navigation */
+
+/* Viewport <= 750px */
+@media only screen and (max-width: 830px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}
