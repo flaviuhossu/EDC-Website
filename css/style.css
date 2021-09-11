@@ -93,6 +93,7 @@ nav {
   color: var(--cyber-yellow);
   transition: all 0.35s ease-out;
 }
+/* de la Toaderu */
 
 /* Bars */
 .nav .toggle-collapse {
@@ -143,5 +144,16 @@ nav {
   .nav .nav-items .nav-link {
     padding: 0.8rem 0;
     width: 100%;
+  }
+  .nav {
+    padding: 0 !important;
+  }
+  .nav-logo,
+  .toggle-collapse,
+  .nav-link a {
+    padding-left: 2rem !important;
+  }
+  .nav .social {
+    display: none;
   }
 }
