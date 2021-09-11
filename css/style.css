@@ -11,6 +11,7 @@
   /* CSS VARS */
   --Staat: Staat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   --fade: linearGradient(90deg, #f83600 0%, #f9d423 100%);
+  --light-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Gradients */
@@ -28,12 +29,20 @@
 
 header {
   background-color: var(--lemon);
+  box-shadow: var(--light-shadow);
 }
 
-a {
-  color: inherit;
+.nav .nav-items .social a{
   text-decoration: none;
-  background-color: var(--lemon);
+}
+.nav-link a {
+  color: inherit;
+  padding:0 0.3rem;
+  display: flex;
+  text-decoration:none;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .flex-row {
   display: flex;
@@ -56,7 +65,7 @@ nav {
   background-color: var(--lemon);
   padding: 0 2rem;
   height: 0rem;
-  min-height: 10vh;
+  min-height: 6rem;
   overflow: hidden;
   transition: height 0.5s ease-in-out;
 }
@@ -65,20 +74,25 @@ nav {
 .nav .nav-items {
   display: flex;
   margin: 0;
+  padding: 0;
+  height: 6rem;
 }
 
 .nav .nav-items .nav-link {
   font-family: var(--Staat);
-  padding: 1.6rem 1.4rem;
+  /* padding: 2rem 1.4rem; */
   display: flex;
+  padding: 0 1rem;
   font-size: 2rem;
-  position: relative;
   text-transform: capitalize;
+  position: relative;
   background-color: var(--lemon);
+
 }
 .nav .nav-items .nav-link :hover {
   background-color: var(--eerie-black);
   color: var(--cyber-yellow);
+  transition: all .35s ease-out;
 }
 
 /* Bars */
@@ -92,20 +106,27 @@ nav {
 .nav .toggle-collapse .toggle-icon {
   display: flex;
   justify-content: flex-end;
-  padding: 1.7rem 0;
+  padding: 2rem 0;
 }
 .nav .toggle-collapse .toggle-icon i {
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: var(--eerie-black);
+  transition: all 0.2s linear;
 }
+
+.nav .toggle-collapse .toggle-icon i:hover {
+  transform: rotate(90deg);
+}
+
 .toggle {
-  height: 30rem;
+  height: 24rem;
 }
 
 /* Social */
 .nav .social {
   background-color: var(--lemon);
-  padding: 1.4rem 0;
+  padding: 2rem 0;
+  text-decoration: none;
   color: blue;
   font-size: 2rem;
 }
@@ -120,4 +141,7 @@ nav {
   .nav .toggle-collapse {
     display: initial;
   }
+  .nav .nav-items .nav-link {
+  padding: 0.8rem 0;
+  width: 100%;
 }
