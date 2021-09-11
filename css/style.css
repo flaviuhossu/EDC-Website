@@ -32,14 +32,14 @@ header {
   box-shadow: var(--light-shadow);
 }
 
-.nav .nav-items .social a{
+.nav .nav-items .social a {
   text-decoration: none;
 }
 .nav-link a {
   color: inherit;
-  padding:0 0.3rem;
+  padding: 0 0.3rem;
   display: flex;
-  text-decoration:none;
+  text-decoration: none;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -87,12 +87,11 @@ nav {
   text-transform: capitalize;
   position: relative;
   background-color: var(--lemon);
-
 }
 .nav .nav-items .nav-link :hover {
   background-color: var(--eerie-black);
   color: var(--cyber-yellow);
-  transition: all .35s ease-out;
+  transition: all 0.35s ease-out;
 }
 
 /* Bars */
@@ -142,6 +141,7 @@ nav {
     display: initial;
   }
   .nav .nav-items .nav-link {
-  padding: 0.8rem 0;
-  width: 100%;
+    padding: 0.8rem 0;
+    width: 100%;
+  }
 }
