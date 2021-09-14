@@ -221,6 +221,10 @@ nav {
   background: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
+/* Class for the welcome-header if the toggling menu is opened */
+.toggled-welcome {
+  height: 0 !important;
+}
 /* FOOTER */
 footer {
   background: var(--eerie-black);

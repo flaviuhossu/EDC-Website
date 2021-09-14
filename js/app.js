@@ -1,10 +1,15 @@
 const bars = document.querySelector('.toggle-collapse')
 const nav = document.querySelector('.nav')
 const video = document.querySelector('.video-container')
+const welcomeHeader = document.querySelector('.welcome-header::after')
 
 bars.addEventListener('click', (event) => {
   nav.classList.toggle('toggle')
 })
+
+if (nav.classList.contains('toggle')) {
+  welcomeHeader.classList.add('toggled-welcome')
+}
 
 // in cazul in care Toggle ramane facut si se face resize peste media querry.
 // TODO: sa nu hardcodezi acel 830. vezi cum poti face
