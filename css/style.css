@@ -203,6 +203,9 @@ nav {
   .nav .social {
     display: none;
   }
+  .welcome-header {
+    font-size: 3.3rem;
+  }
 }
 
 /* header after */
