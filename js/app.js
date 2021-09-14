@@ -1,5 +1,6 @@
 const bars = document.querySelector('.toggle-collapse')
 const nav = document.querySelector('.nav')
+const video = document.querySelector('.video-container')
 
 bars.addEventListener('click', (event) => {
   nav.classList.toggle('toggle')
@@ -12,4 +13,12 @@ window.addEventListener('resize', (event) => {
   if (window.innerWidth > 830) {
     nav.classList.remove('toggle')
   }
+})
+
+// PRELOADER
+const preloader = document.querySelector('.preloader')
+
+window.addEventListener('load', function () {
+  preloader.classList.add('hide-preloader')
+  video.classList.add('show-video')
 })
