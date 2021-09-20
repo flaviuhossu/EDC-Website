@@ -11,7 +11,7 @@
   /* CSS VARS */
   --Staat: Staat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   --fade: linearGradient(90deg, #f83600 0%, #f9d423 100%);
-  --light-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --light-shadow: 15px 10px 15px 15px rgba(0, 0, 0, 0.2);
   --nav-height: 6rem;
 }
 
@@ -94,7 +94,18 @@ nav {
   color: var(--cyber-yellow);
   transition: all 0.35s ease-out;
 }
-/* de la Toaderu */
+/* SOCIAL */
+.social {
+  padding-top: 1.5rem !important;
+}
+.social a {
+  font-size: 2.8rem;
+  text-decoration: none;
+  color: var(--eerie-black);
+}
+.social i {
+  border-radius: 50%;
+}
 
 /* Bars */
 .nav .toggle-collapse {
@@ -184,7 +195,7 @@ nav {
 }
 
 /* Viewport <= 750px */
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 832px) {
   .nav .nav-menu,
   .nav .nav-items {
     flex-direction: column;
@@ -224,6 +235,7 @@ footer {
   width: 100%;
   background: var(--eerie-black);
   padding: 2rem 1rem;
+  box-shadow: 10px 10px 12px 12px rgba(0, 0, 0, 0.5);
 }
 footer p {
   font-family: Staat;
