@@ -139,6 +139,7 @@ nav {
 .video-container {
   position: absolute;
   visibility: hidden;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
@@ -147,6 +148,9 @@ nav {
   z-index: -2;
 }
 .welcome-header {
+  transition: all 0.5s ease-in-out;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
   min-height: calc(100vh - 6rem);
   position: relative;
   display: grid;
@@ -208,32 +212,24 @@ nav {
   }
 }
 
-/* header after */
-.welcome-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(
-    100vh - 6rem
-  ); /*Aici am scazut 6 rem (inaltimea barii de navigatie)*/
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
 /* Class for the welcome-header if the toggling menu is opened */
 .toggled-welcome {
-  height: 0 !important;
+  min-height: calc(100vh - 24rem);
 }
 /* FOOTER */
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background: var(--eerie-black);
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
 }
 footer p {
   font-family: Staat;
   color: var(--light-gray);
   text-align: center;
+  letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 0;
 }
