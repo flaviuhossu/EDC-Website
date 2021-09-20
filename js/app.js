@@ -13,7 +13,7 @@ bars.addEventListener('click', (event) => {
 })
 
 // in cazul in care Toggle ramane facut si se face resize peste media querry.
-// TODO: sa nu hardcodezi acel 830. vezi cum poti face
+// TODO: sa nu hardcodezi acel 832. vezi cum poti face
 window.addEventListener('resize', (event) => {
   console.log(window.innerWidth)
   if (window.innerWidth >= 832) {
