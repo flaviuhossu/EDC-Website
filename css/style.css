@@ -28,6 +28,10 @@
 
 /* GLOBAL CLASSES */
 
+body {
+  position: relative;
+}
+
 header {
   background-color: var(--lemon);
   box-shadow: var(--light-shadow);
@@ -229,6 +233,10 @@ nav {
 }
 /* FOOTER */
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   background: var(--eerie-black);
   padding: 2rem 1rem;
@@ -241,4 +249,19 @@ footer p {
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 0;
+}
+/*  /////DESPRE///// */
+.rectangle-flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 84px;
+}
+.rectangle-1 {
+  background: red;
+  flex: 1;
+}
+.rectangle-2 {
+  background: turquoise;
+  flex: 1;
 }
