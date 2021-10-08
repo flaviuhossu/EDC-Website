@@ -7,6 +7,8 @@
   --cyber-yellow: #ffd100;
   --eerie-black: #202020;
   --jet: #333533;
+  --despre-albastru: #a0daf3;
+  --despre-galben: #ffd101;
 
   /* CSS VARS */
   --Staat: Staat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -252,46 +254,95 @@ footer p {
   text-transform: capitalize;
   margin-bottom: 0;
 }
-/*  /////DESPRE///// */
-.hero-despre {
-  display: flex;
-  height: 80vh;
-  background: url('../src/hero.jpg.png');
-  background-size: cover;
-
+/*  /////////////////////////////////DESPRE//////////////////////// */
+.container-despre {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  background: url('/src/hero_spalatacit.png');
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.despre-card {
+  transition: 1s ease-in-out;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+}
+.despre-info {
+  flex: 1;
+  width: 100%;
+  background-color: var(--despre-albastru);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.despre-servicii {
+  flex: 1;
+  width: 100%;
+  background-color: var(--despre-galben);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*  */
+.despre-titlu {
+  height: 30%;
+  color: azure;
+  font-size: 4rem;
+  font-family: var(--Staat), sans-serif;
+  letter-spacing: 0.2rem;
+}
+.despre-detalii {
+  /* height: 70%; */
+  width: 80%;
+  text-align: justify;
+  color: var(--jet);
+  font-size: 1rem;
+  font-family: var(--Staat), sans-serif;
+  letter-spacing: 0.07rem;
+}
+/*  */
+.despre-servicii h3 {
+  height: 20%;
+  transform: translateY(50%);
+
+  color: var(--jet);
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-family: var(--Staat), sans-serif;
+  letter-spacing: 0.07rem;
+}
+.lista-servicii {
+  transform: translateY(10%);
+  height: 100%;
 }
 
-.title-despre {
-  position: absolute;
-  top: 35vh;
-  left: 5vw;
-  font-family: var(--Staat);
-  font-weight: 500;
-  font-size: 5rem;
-  color: azure;
-}
-.cine-suntem {
-  position: absolute;
-  top: 35vh;
-  right: 5vw;
-  font-family: var(--Staat);
-  font-weight: 500;
-  font-size: 5rem;
-  color: azure;
-}
-.descriere-despre {
-  width: 35vw;
-  height: 12vh;
-  position: absolute;
-  top: 50vh;
-  right: 10vw;
-  font-family: var(--Staat);
-  font-weight: 500;
-  font-size: 1.2rem;
-  letter-spacing: 0.7px;
+.lista-servicii .serviciu {
+  height: 7vh;
+  display: flex;
+  align-items: center;
   color: var(--jet);
-  text-align: justify;
+  font-size: clamp(1rem, 2vw, 3rem);
+  font-family: var(--Staat), sans-serif;
+  letter-spacing: 0.07rem;
+  line-height: 2.5rem;
+  flex: 1;
+}
+.lista-servicii .serviciu i {
+  font-size: 2rem;
+  margin-right: 1rem;
 }
 
 /*  /////GALERIE///// */
@@ -299,13 +350,20 @@ footer p {
 .carousel-container {
   display: flex;
   justify-content: center;
-  background: var(--eerie-black);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 209, 1, 1) 0%,
+    rgba(233, 211, 57, 1) 15%,
+    rgba(160, 218, 243, 1) 100%
+  );
+  padding: 2rem 2rem 0 2rem;
 }
 .carousel {
   position: relative;
   height: 800px;
   width: 80%;
   background: yellow;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
 }
 .carousel__image {
   width: 100%;
@@ -356,20 +414,26 @@ footer p {
 .carousel__button i {
   width: 50px;
   height: 50px;
-  font-size: 2rem;
-  color: white;
+  font-size: 3rem;
+  color: azure;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .carousel__button--left {
+  width: 50px;
+  height: 50px;
   left: -50px;
   z-index: 10;
 }
 .carousel__button--right {
   right: -50px;
+  width: 50px;
+  height: 50px;
 }
 
 .carousel__nav {
-  background: var(--eerie-black);
+  background: var(--despre-galben);
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -379,16 +443,29 @@ footer p {
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background: rgba(218, 214, 214, 0.3);
+  background: rgb(83, 68, 68);
   margin: 0 12px;
   cursor: pointer;
 }
 .carousel__indicator.current-slide {
-  background: rgba(255, 256, 255, 0.9);
+  background: azure;
 }
 
 .is-hidden {
   display: none;
+}
+
+@media (max-width: 830px) {
+  .carousel {
+    width: 100%;
+  }
+  .carousel__button--left {
+    left: 50px;
+    z-index: 10;
+  }
+  .carousel__button--right {
+    right: 50px;
+  }
 }
 /* ///////////////////////CONTACT/////////////////////// */
 
@@ -417,12 +494,12 @@ footer p {
   grid-template-columns: repeat(2, 1fr);
 }
 .contact-form {
-  background-color: #1abc9c;
+  background-color: var(--despre-galben);
   position: relative;
 }
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #149279);
+  background: linear-gradient(135deg, transparent 20%, var(--despre-albastru));
   position: absolute;
 }
 .circle.one {
@@ -444,7 +521,7 @@ footer p {
   width: 26px;
   height: 26px;
 
-  background-color: #1abc9c;
+  background-color: var(--despre-galben);
   transform: rotate(45deg);
 
   top: 50px;
@@ -459,7 +536,7 @@ form {
 }
 .form-title {
   font-family: var(--Staat);
-  color: #fff;
+  color: --;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1;
@@ -474,7 +551,7 @@ form {
 
   width: 100%;
   outline: none;
-  border: 2px solid #fafafa;
+  border: 2px solid azure;
   background: none;
   padding: 0.6rem 1.2rem;
   color: #fff;
@@ -515,7 +592,7 @@ textarea.input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #1abc9c;
+  color: var(--jet);
   line-height: 1;
   border-radius: 25px;
   outline: none;
@@ -545,7 +622,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #1abc9c;
+  background-color: var(--despre-galben);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -566,6 +643,14 @@ textarea.input {
   width: 50%;
   opacity: 1;
 }
+/* Remove autofill white bg-color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: var(--jet) !important;
+}
 
 .icon {
   width: 28px;
@@ -579,7 +664,7 @@ textarea.input {
 }
 
 .contact-info .form-title {
-  color: #1abc9c;
+  color: var(--jet);
 }
 .text {
   color: #333;
@@ -600,18 +685,23 @@ textarea.input {
   padding: 2rem 0 0 0;
 }
 .social-media p {
+  margin-bottom: 1rem;
   color: #333;
 }
+
 .social-icons {
   display: flex;
-  margin-top: 0.5rem;
+  color: #333;
+  align-items: center;
+  justify-content: start;
 }
 .social-icons a {
+  font-size: 1.4rem;
+  color: #333;
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg, #1abc9c, #149279);
-  color: #fff;
+  background: linear-gradient(45deg, #ffd101, #a0daf3);
   text-align: center;
   line-height: 35px;
   margin-right: 0.5rem;
@@ -626,8 +716,8 @@ textarea.input {
   position: absolute;
   width: 110px;
   height: 100px;
-  background-color: #1abc9c;
-  border: 22px solid #1abc9c;
+  background-color: #fafafa;
+  border: 22px solid #a0daf3;
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
@@ -638,7 +728,7 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #1cd4af, #159b80);
+  background: linear-gradient(to bottom, #ffd101, #a0daf3);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
