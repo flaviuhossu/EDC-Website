@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EDC ELECTRIC</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="./css/all.css" />
   </head>
@@ -16,7 +16,7 @@
       <nav class="nav">
         <div class="nav-menu flex-row">
           <div class="nav-logo">
-            <a href="" class="logo-link">
+            <a href="./index.html" class="logo-link">
               <img src="./src/EDC_logo.png" alt="EDC_LOGO" />
             </a>
           </div>
@@ -83,11 +83,13 @@
           <div class="social-media">
               <p>Conectază-te cu noi</p>
               <div class="social-icons">
-                <a href="#">
+                <a href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
+                target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               <div class="social-icons">
-                <a href="#">
+                <a href="https://www.instagram.com/electrodesignconcept/?hl=en"
+                target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
               </div>
@@ -121,7 +123,7 @@
                 <label for="">Mesaj</label>
                 <span>Mesaj</span>
               </div>
-              <input type="submit" value="Send" class="form-btn">
+              <input type="submit" value="Trimite" class="form-btn">
             </form>
           </div>
         </div>
@@ -132,10 +134,18 @@
     <footer>
       <p>
         copyright &copy; EDC instalatii electrice
-        <span id="date">XXXX</span>
+        <span id="date">2021</span>
       </p>
     </footer>
     <!-- END OF FOOTER -->
   </body>
+  <!-- Main Script -->
+  <script type = "module" src="./scripts/app.js">
+  </script>
+  <script>
+    // SET DATE
+    const date = document.getElementById('date')
+    date.innerHTML = new Date().getFullYear()
+  </script>
   <script type="module" src="./scripts/contact.js"></script>
 </html>

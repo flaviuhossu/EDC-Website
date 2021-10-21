@@ -2,20 +2,25 @@
 @font-face {
   /* Lusitana = PARAGRAF */
   font-family: Lusitana;
-  src: url("../fonts/Lusitana-Regular.ttf");
+  src: url('../fonts/Lusitana-Regular.ttf');
 }
 @font-face {
   /* Chakra = Headings */
   font-family: Chakra;
-  src: url("../fonts/ChakraPetch-Regular.ttf");
+  src: url('../fonts/ChakraPetch-Regular.ttf');
 }
 @font-face {
   /* Staat = Main Headings */
   font-family: Staat;
-  src: url("../fonts/Staatliches-Regular.ttf");
+  src: url('../fonts/Staatliches-Regular.ttf');
 }
 @font-face {
   /* Start2P = Attention grabbing font */
   font-family: Start2P;
-  src: url("../fonts/PressStart2P-Regular.ttf");
+  src: url('../fonts/PressStart2P-Regular.ttf');
+}
+@font-face {
+  /* Start2P = Attention grabbing font */
+  font-family: RobotoC;
+  src: url('../fonts/RobotoCondensed-Bold.ttf');
 }

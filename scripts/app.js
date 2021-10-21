@@ -102,104 +102,167 @@ date.innerHTML = new Date().getFullYear()
 // imageGallery()
 
 /////////////CAROUSEL////////////////
-const track = document.querySelector('.carousel__track')
+// const track = document.querySelector('.carousel__track')
 
-const slides = Array.from(track.children)
+// const slides = Array.from(track.children)
 
-const nextButton = document.querySelector('.carousel__button--right')
-const prevButton = document.querySelector('.carousel__button--left')
+// const nextButton = document.querySelector('.carousel__button--right')
+// const prevButton = document.querySelector('.carousel__button--left')
 
-const dotsNav = document.querySelector('.carousel__nav')
-const dots = Array.from(dotsNav.children)
+// const dotsNav = document.querySelector('.carousel__nav')
+// const dots = Array.from(dotsNav.children)
 
-var slideWidth = slides[0].getBoundingClientRect().width
-track.addEventListener('resize', (e) => {
-  slideWidth = slides[0].getBoundingClientRect().width
-})
+// var slideWidth = slides[0].getBoundingClientRect().width
+// track.addEventListener('resize', (e) => {
+//   slideWidth = slides[0].getBoundingClientRect().width
+// })
 
-//arrange the slides next to each other
+// //arrange the slides next to each other
 
-const setSlidePosition = (slide, index) => {
-  console.log(slideWidth)
-  slide.style.left = slideWidth * index + 'px'
-}
+// const setSlidePosition = (slide, index) => {
+//   console.log(slideWidth)
+//   slide.style.left = slideWidth * index + 'px'
+// }
 
-slides.forEach(setSlidePosition)
+// slides.forEach(setSlidePosition)
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = 'translateX(-' + targetSlide.style.left + ')'
+// const moveToSlide = (track, currentSlide, targetSlide) => {
+//   track.style.transform = 'translateX(-' + targetSlide.style.left + ')'
 
-  //assign the nextSlide the "current-slide" class
-  currentSlide.classList.remove('current-slide')
-  targetSlide.classList.add('current-slide')
-}
-//Update the dots
-const updateDots = (currentDot, targetDot) => {
-  currentDot.classList.remove('current-slide')
-  targetDot.classList.add('current-slide')
-}
-//Show/Hide arrows
+//   //assign the nextSlide the "current-slide" class
+//   currentSlide.classList.remove('current-slide')
+//   targetSlide.classList.add('current-slide')
+// }
+// //Update the dots
+// const updateDots = (currentDot, targetDot) => {
+//   currentDot.classList.remove('current-slide')
+//   targetDot.classList.add('current-slide')
+// }
+// //Show/Hide arrows
 
-const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-  if (targetIndex === 0) {
-    prevButton.classList.add('is-hidden')
-    nextButton.classList.remove('is-hidden')
-  } else if (targetIndex === slides.length - 1) {
-    prevButton.classList.remove('is-hidden')
-    nextButton.classList.add('is-hidden')
+// const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
+//   if (targetIndex === 0) {
+//     prevButton.classList.add('is-hidden')
+//     nextButton.classList.remove('is-hidden')
+//   } else if (targetIndex === slides.length - 1) {
+//     prevButton.classList.remove('is-hidden')
+//     nextButton.classList.add('is-hidden')
+//   } else {
+//     prevButton.classList.remove('is-hidden')
+//     nextButton.classList.remove('is-hidden')
+//   }
+// }
+
+// // When I click left, move slides to the left
+// prevButton.addEventListener('click', (e) => {
+//   const currentSlide = track.querySelector('.current-slide')
+//   const prevSlide = currentSlide.previousElementSibling
+//   const currentDot = dotsNav.querySelector('.current-slide')
+//   const prevDot = currentDot.previousElementSibling
+//   const prevIndex = slides.findIndex((slide) => slide === prevSlide)
+
+//   moveToSlide(track, currentSlide, prevSlide)
+//   updateDots(currentDot, prevDot)
+//   hideShowArrows(slides, prevButton, nextButton, prevIndex)
+// })
+// // When I click right, move slides to the right
+
+// nextButton.addEventListener('click', (e) => {
+//   const currentSlide = track.querySelector('.current-slide')
+//   const nextSlide = currentSlide.nextElementSibling
+//   const currentDot = dotsNav.querySelector('.current-slide')
+//   const nextDot = currentDot.nextElementSibling
+//   const nextIndex = slides.findIndex((slide) => slide === nextSlide)
+
+//   moveToSlide(track, currentSlide, nextSlide)
+
+//   updateDots(currentDot, nextDot)
+
+//   hideShowArrows(slides, prevButton, nextButton, nextIndex)
+// })
+
+// // When I click to the nav indicators, move to that slide
+
+// dotsNav.addEventListener('click', (e) => {
+//   const targetDot = e.target.closest('button')
+
+//   // If i did not click on a button, exit function
+//   if (!targetDot) return
+
+//   const currentSlide = track.querySelector('.current-slide')
+//   const currentDot = dotsNav.querySelector('.current-slide')
+
+//   //the button i clicked on
+//   const targetIndex = dots.findIndex((dot) => dot === targetDot)
+//   //now we know which slide we need to go
+//   const targetSlide = slides[targetIndex]
+//   //calling the function to go to that slide
+//   moveToSlide(track, currentSlide, targetSlide)
+
+//   updateDots(currentDot, targetDot)
+
+//   hideShowArrows(slides, prevButton, nextButton, targetIndex)
+// })
+
+const slides = document.querySelectorAll('.slide')
+const next = document.querySelector('#next')
+const prev = document.querySelector('#prev')
+const auto = false
+const intervalTime = 5000
+let slideInterval
+
+const nextSlide = () => {
+  //get current class
+  const current = document.querySelector('.current')
+  //remove current class
+  current.classList.remove('current')
+  //check for next slide
+  if (current.nextElementSibling) {
+    //add current to the next sibling
+    current.nextElementSibling.classList.add('current')
   } else {
-    prevButton.classList.remove('is-hidden')
-    nextButton.classList.remove('is-hidden')
+    //add current to start
+    slides[0].classList.add('current')
   }
+  setTimeout(() => {
+    current.classList.remove('current')
+  })
 }
-
-// When I click left, move slides to the left
-prevButton.addEventListener('click', (e) => {
-  const currentSlide = track.querySelector('.current-slide')
-  const prevSlide = currentSlide.previousElementSibling
-  const currentDot = dotsNav.querySelector('.current-slide')
-  const prevDot = currentDot.previousElementSibling
-  const prevIndex = slides.findIndex((slide) => slide === prevSlide)
-
-  moveToSlide(track, currentSlide, prevSlide)
-  updateDots(currentDot, prevDot)
-  hideShowArrows(slides, prevButton, nextButton, prevIndex)
+const prevSlide = () => {
+  //get current class
+  const current = document.querySelector('.current')
+  //remove current class
+  current.classList.remove('current')
+  //check for previous slide
+  if (current.previousElementSibling) {
+    //add current to the previous sibling
+    current.previousElementSibling.classList.add('current')
+  } else {
+    //add current class to the last one
+    slides[slides.length - 1].classList.add('current')
+  }
+  setTimeout(() => {
+    current.classList.remove('current')
+  })
+}
+//Button events
+next.addEventListener('click', (e) => {
+  nextSlide()
+  if (auto) {
+    clearInterval(slideInterval)
+    slideInterval = setInterval(nextSlide, intervalTime)
+  }
 })
-// When I click right, move slides to the right
-
-nextButton.addEventListener('click', (e) => {
-  const currentSlide = track.querySelector('.current-slide')
-  const nextSlide = currentSlide.nextElementSibling
-  const currentDot = dotsNav.querySelector('.current-slide')
-  const nextDot = currentDot.nextElementSibling
-  const nextIndex = slides.findIndex((slide) => slide === nextSlide)
-
-  moveToSlide(track, currentSlide, nextSlide)
-
-  updateDots(currentDot, nextDot)
-
-  hideShowArrows(slides, prevButton, nextButton, nextIndex)
+prev.addEventListener('click', (e) => {
+  prevSlide()
+  if (auto) {
+    clearInterval(slideInterval)
+    slideInterval = setInterval(nextSlide, intervalTime)
+  }
 })
 
-// When I click to the nav indicators, move to that slide
-
-dotsNav.addEventListener('click', (e) => {
-  const targetDot = e.target.closest('button')
-
-  // If i did not click on a button, exit function
-  if (!targetDot) return
-
-  const currentSlide = track.querySelector('.current-slide')
-  const currentDot = dotsNav.querySelector('.current-slide')
-
-  //the button i clicked on
-  const targetIndex = dots.findIndex((dot) => dot === targetDot)
-  //now we know which slide we need to go
-  const targetSlide = slides[targetIndex]
-  //calling the function to go to that slide
-  moveToSlide(track, currentSlide, targetSlide)
-
-  updateDots(currentDot, targetDot)
-
-  hideShowArrows(slides, prevButton, nextButton, targetIndex)
-})
+// Auto-slide
+if (auto) {
+  //run next-slide @ Interval time
+  slideInterval = setInterval(nextSlide, intervalTime)
+}
