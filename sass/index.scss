@@ -1,0 +1,104 @@
+/* MAIN SITE */
+
+/* VIDEO */
+.video-container {
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.welcome-header {
+  transition: all 0.5s ease-in-out;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  min-height: calc(100vh - 6rem);
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  font-family: Staat;
+  font-size: 5rem;
+  color: floralwhite;
+}
+/* PRELOADER */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+  transition: all 0.1s ease-in-out;
+}
+.show-video {
+  visibility: visible;
+}
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+}
+
+/* Viewport <= 750px */
+@media only screen and (max-width: 832px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+  .nav .toggle-collapse {
+    display: initial;
+  }
+  .nav .nav-items .nav-link {
+    padding: 0.8rem 0;
+    width: 100%;
+  }
+  .nav {
+    padding: 0 !important;
+  }
+  .nav-logo,
+  .toggle-collapse,
+  .nav-link a {
+    padding-left: 2rem !important;
+  }
+  .nav .social {
+    display: none;
+  }
+  .welcome-header {
+    font-size: 3.3rem;
+  }
+}
+
+/* Class for the welcome-header if the toggling menu is opened */
+.toggled-welcome {
+  min-height: calc(100vh - 24rem);
+}
+/* FOOTER */
+footer {
+  /* bottom: 0;
+  left: 0;
+  right: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12vh;
+  background: var(--eerie-black);
+  box-shadow: 10px 10px 12px 12px rgba(0, 0, 0, 0.1);
+}
+footer p {
+  font-family: Staat;
+  color: var(--light-gray);
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}

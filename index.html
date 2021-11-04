@@ -6,55 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EDC ELECTRIC</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="./css/all.css" />
+    <!--                         ↓ CSS VARS AND RESETS TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/base.min.css" />
+    <!--                         ↓ INDEX TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/index.min.css" />
+    <!--                         ↓ NAVBAR TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/navbar.min.css" />
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- NAVIGATION -->
     <header>
       <nav class="nav">
-        <div class="nav-menu flex-row">
-          <div class="nav-logo">
-            <a href="" class="logo-link">
-              <img src="./src/EDC_logo.png" alt="EDC_LOGO" />
-            </a>
+        <div class="nav__logo">
+          <a href="" class="nav__logo--link">
+            <img src="./src/EDC_logo.png" alt="EDC_LOGO" />
+          </a>
+        </div>
+        <div class="nav__toggle-collapse">
+          <div class="nav__toggle-collapse--toggle-icon">
+            <i class="fas fa-bars"></i>
           </div>
-          <div class="toggle-collapse">
-            <div class="toggle-icon">
-              <i class="fas fa-bars"></i>
-            </div>
-          </div>
-          <ul class="nav-items">
-            <li class="nav-link">
-              <a href="./index.html">acasa</a>
-            </li>
-            <li class="nav-link">
-              <a href="./despre.html">despre</a>
-            </li>
-            <li class="nav-link">
-              <a href="./galerie.html">galerie</a>
-            </li>
-            <li class="nav-link">
-              <a href="./contact.html">contact</a>
-            </li>
-          </ul>
-          <div class="social">
-            <a href="https://wa.me/40770839160" target="_blank">
-              <i class="fab fa-whatsapp-square"></i
-            ></a>
-            <a
-              href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
-              target="_blank"
-              ><i class="fab fa-facebook-square"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/electrodesignconcept/?hl=en"
-              target="_blank"
-            >
-              <i class="fab fa-instagram-square"></i
-            ></a>
-          </div>
+        </div>
+        <ul class="nav__items">
+          <li class="nav__items--link">
+            <a href="./index.html">acasa</a>
+          </li>
+          <li class="nav__items--link">
+            <a href="./despre.html">despre</a>
+          </li>
+          <li class="nav__items--link">
+            <a href="./galerie.html">galerie</a>
+          </li>
+          <li class="nav__items--link">
+            <a href="./contact.html">contact</a>
+          </li>
+        </ul>
+        <div class="nav__social">
+          <a
+            class="nav__social--link"
+            href="https://wa.me/40770839160"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp-square"></i
+          ></a>
+          <a
+            class="nav__social--link"
+            href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
+            target="_blank"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a
+            class="nav__social--link"
+            href="https://www.instagram.com/electrodesignconcept/?hl=en"
+            target="_blank"
+          >
+            <i class="fab fa-instagram-square"></i
+          ></a>
         </div>
       </nav>
     </header>
@@ -62,13 +76,13 @@
     <!-- MAIN SITE SECTION -->
     <main>
       <!-- PRELOADER -->
-      <div class="preloader">
+      <!-- <div class="preloader">
         <img
           src="./src/preloader.gif"
           alt="preloader"
           class="preloader__item"
         />
-      </div>
+      </div> -->
       <!-- VIDEO -->
       <video class="video-container" muted autoplay loop>
         <source src="./src/video_lightbulb_compressed.mp4" type="video/mp4" />
