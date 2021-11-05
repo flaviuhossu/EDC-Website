@@ -1,5 +1,3 @@
-////////////////////////CONTACT//////////////////////
-//
 function focusFunc() {
   let parent = this.parentNode
   parent.classList.add('focus')

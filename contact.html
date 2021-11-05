@@ -6,46 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EDC ELECTRIC</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" type="text/css" />
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="./css/all.css" />
+    <!--                         ↓ CSS VARS AND RESETS TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/base.min.css" />
+    <!--                         ↓ CONTACT TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/contact.min.css" />
+    <!--                         ↓ NAVBAR TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/navbar.min.css" />
+    <!--                         ↓ FOOTER TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/footer.min.css" />
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <!-- NAVBAR SCRIPT -->
+    <script src="./scripts/navbar.js" type="module" defer></script>
+    <!-- DATE SCRIPT -->
+    <script src="./scripts/date.js" type="module" defer></script>
   </head>
-  <header>
+  <body>
     <!-- NAVIGATION -->
-  </header>
+    <header>
       <nav class="nav">
-        <div class="nav-menu flex-row">
-          <div class="nav-logo">
-            <a href="./index.html" class="logo-link">
-              <img src="./src/EDC_logo.png" alt="EDC_LOGO" />
+        <div class="nav__menu">
+          <div class="nav__menu__logo">
+            <a href="./index.html" class="nav__menu__logo--link">
+              <img src="./src/EleXsis.svg" alt="EDC_LOGO" />
             </a>
           </div>
-          <div class="toggle-collapse">
-            <div class="toggle-icon">
-              <i class="fas fa-bars"></i>
+          <div class="nav__menu__toggle-collapse">
+            <div class="nav__menu__toggle-collapse__container">
+              <i
+                class="
+                  fas
+                  fa-bars
+                  nav__menu__toggle-collapse__container--toggle-icon
+                "
+              ></i>
             </div>
           </div>
-          <ul class="nav-items">
-            <li class="nav-link">
-              <a href="./index.html">acasa</a>
+          <ul class="nav__menu__items">
+            <li class="nav__menu__items__list-item">
+              <a href="./index.html" class="nav__menu__items__list-item--link"
+                >acasă</a
+              >
             </li>
-            <li class="nav-link">
-              <a href="./despre.html">despre</a>
+            <li class="nav__menu__items__list-item">
+              <a href="./despre.html" class="nav__menu__items__list-item--link"
+                >despre</a
+              >
             </li>
-            <li class="nav-link">
-              <a href="./galerie.html">galerie</a>
+            <li class="nav__menu__items__list-item">
+              <a href="./galerie.html" class="nav__menu__items__list-item--link"
+                >galerie</a
+              >
             </li>
-            <li class="nav-link">
-              <a href="./contact.html">contact</a>
+            <li class="nav__menu__items__list-item current-page">
+              <a href="./contact.html" class="nav__menu__items__list-item--link"
+                >contact</a
+              >
             </li>
           </ul>
-          <div class="social">
+          <div class="nav__menu__social">
             <a
+              class="nav__menu__social--link"
+              href="https://wa.me/40770839160"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp-square"></i
+            ></a>
+            <a
+              class="nav__menu__social--link"
               href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
               target="_blank"
               ><i class="fab fa-facebook-square"></i
             ></a>
             <a
+              class="nav__menu__social--link"
               href="https://www.instagram.com/electrodesignconcept/?hl=en"
               target="_blank"
             >
@@ -64,7 +103,10 @@
           <div class="contact-info">
             <h3 class="form-title">Hai să ne cunoaștem</h3>
             <p class="text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, iste unde deserunt doloribus facere dolorem. Iure voluptates nisi debitis odit earum fugit quod, blanditiis facere consequuntur saepe vel rem possimus facilis. Alias aliquid rem ut.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias,
+              iste unde deserunt doloribus facere dolorem. Iure voluptates nisi
+              debitis odit earum fugit quod, blanditiis facere consequuntur
+              saepe vel rem possimus facilis. Alias aliquid rem ut.
             </p>
             <div class="info">
               <div class="information">
@@ -80,54 +122,63 @@
                 <p>0729-245-235</p>
               </div>
             </div>
-          <div class="social-media">
+            <div class="social-media">
               <p>Conectază-te cu noi</p>
               <div class="social-icons">
-                <a href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
-                target="_blank">
+                <a
+                  href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
+                  target="_blank"
+                >
                   <i class="fab fa-facebook-f"></i>
                 </a>
-              
-                <a href="https://www.instagram.com/electrodesignconcept/?hl=en"
-                target="_blank">
+
+                <a
+                  href="https://www.instagram.com/electrodesignconcept/?hl=en"
+                  target="_blank"
+                >
                   <i class="fab fa-instagram"></i>
                 </a>
-                
-                <a href="https://wa.me/40770839160"
-                target="_blank">
+
+                <a href="https://wa.me/40770839160" target="_blank">
                   <i class="fab fa-whatsapp"></i>
                 </a>
+              </div>
             </div>
-          </div>
-
           </div>
           <div class="contact-form">
             <span class="circle one"></span>
             <span class="circle two"></span>
-            <form action="https://formsubmit.co/7eea973b12c0934057b48dfe275f68aa" method="POST">
-              <h3 class="form-title">Contactează-ne
-              </h3>
+            <form
+              action="https://formsubmit.co/7eea973b12c0934057b48dfe275f68aa"
+              method="POST"
+            >
+              <h3 class="form-title">Contactează-ne</h3>
               <div class="input-container focus">
-                <input type="text" name="name" class="input">
+                <input type="text" name="name" class="input" />
                 <label for="">Nume</label>
                 <span>Nume</span>
               </div>
               <div class="input-container">
-                <input type="email" name="email" class="input">
+                <input type="email" name="email" class="input" />
                 <label for="">E-mail</label>
                 <span>E-mail</span>
               </div>
               <div class="input-container">
-                <input type="tel" name="phone" class="input">
+                <input type="tel" name="phone" class="input" />
                 <label for="">Telefon</label>
                 <span>Telefon</span>
               </div>
               <div class="input-container">
-                <textarea name="message" class="input" cols="30" rows="10"></textarea>
+                <textarea
+                  name="message"
+                  class="input"
+                  cols="30"
+                  rows="10"
+                ></textarea>
                 <label for="">Mesaj</label>
                 <span>Mesaj</span>
               </div>
-              <input type="submit" value="Trimite" class="form-btn">
+              <input type="submit" value="Trimite" class="form-btn" />
             </form>
           </div>
         </div>
@@ -143,13 +194,4 @@
     </footer>
     <!-- END OF FOOTER -->
   </body>
-  <!-- Main Script -->
-  <script type = "module" src="./scripts/app.js">
-  </script>
-  <script>
-    // SET DATE
-    const date = document.getElementById('date')
-    date.innerHTML = new Date().getFullYear()
-  </script>
-  <script type="module" src="./scripts/contact.js"></script>
 </html>

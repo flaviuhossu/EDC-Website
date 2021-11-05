@@ -4,7 +4,7 @@
 // VARS
 :root {
   /* Coolors palette */
-  /* https://coolors.co/d6d6d6-f5f410-ffd100-202020-333533 */
+  // https://coolors.co/d6d6d6-f5f410-ffd100-202020-333533
   --light-gray: #d6d6d6;
   --lemon: #f5f410;
   --cyber-yellow: #ffd100;
@@ -13,29 +13,21 @@
   --despre-albastru: #a0daf3;
   --despre-galben: #ffd101;
   --RobotoC: RobotoC;
-  --Staat: Staat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  --Staat: Staat;
   --fade: linearGradient(90deg, #f83600 0%, #f9d423 100%);
   --light-shadow: 15px 10px 15px 15px rgba(0, 0, 0, 0.2);
-  --nav-height: 6rem;
+
+  --navbar-height: 82px;
+
+  --breakpoint-tablet: 768px;
+  --breakpoint-phone: 340px;
 }
-
-/* Gradients */
-
-/* End of Gradients */
-/* Defaults */
+// Defaults
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
-/* GLOBAL CLASSES */
-
 body {
   position: relative;
-}
-
-header {
-  background-color: var(--lemon);
-  box-shadow: var(--light-shadow);
 }

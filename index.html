@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/index.min.css" />
     <!--                         ↓ NAVBAR TRANSPILED SCSS -->
     <link rel="stylesheet" href="./css/navbar.min.css" />
+    <!--                         ↓ FOOTER TRANSPILED SCSS -->
+    <link rel="stylesheet" href="./css/footer.min.css" />
     <!-- FONT AWESOME CDN -->
     <link
       rel="stylesheet"
@@ -19,85 +21,98 @@
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
+    <!-- NAVBAR SCRIPT -->
+    <script src="./scripts/navbar.js" type="module" defer></script>
+    <!-- DATE SCRIPT -->
+    <script src="./scripts/date.js" type="module" defer></script>
   </head>
   <body>
     <!-- NAVIGATION -->
     <header>
       <nav class="nav">
-        <div class="nav__logo">
-          <a href="" class="nav__logo--link">
-            <img src="./src/EDC_logo.png" alt="EDC_LOGO" />
-          </a>
-        </div>
-        <div class="nav__toggle-collapse">
-          <div class="nav__toggle-collapse--toggle-icon">
-            <i class="fas fa-bars"></i>
+        <div class="nav__menu">
+          <div class="nav__menu__logo">
+            <a href="./index.html" class="nav__menu__logo--link">
+              <img src="./src/EleXsis.svg" alt="EDC_LOGO" />
+            </a>
           </div>
-        </div>
-        <ul class="nav__items">
-          <li class="nav__items--link">
-            <a href="./index.html">acasa</a>
-          </li>
-          <li class="nav__items--link">
-            <a href="./despre.html">despre</a>
-          </li>
-          <li class="nav__items--link">
-            <a href="./galerie.html">galerie</a>
-          </li>
-          <li class="nav__items--link">
-            <a href="./contact.html">contact</a>
-          </li>
-        </ul>
-        <div class="nav__social">
-          <a
-            class="nav__social--link"
-            href="https://wa.me/40770839160"
-            target="_blank"
-          >
-            <i class="fab fa-whatsapp-square"></i
-          ></a>
-          <a
-            class="nav__social--link"
-            href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
-            target="_blank"
-            ><i class="fab fa-facebook-square"></i
-          ></a>
-          <a
-            class="nav__social--link"
-            href="https://www.instagram.com/electrodesignconcept/?hl=en"
-            target="_blank"
-          >
-            <i class="fab fa-instagram-square"></i
-          ></a>
+          <div class="nav__menu__toggle-collapse">
+            <div class="nav__menu__toggle-collapse__container">
+              <i
+                class="
+                  fas
+                  fa-bars
+                  nav__menu__toggle-collapse__container--toggle-icon
+                "
+              ></i>
+            </div>
+          </div>
+          <ul class="nav__menu__items">
+            <li class="nav__menu__items__list-item current-page">
+              <a href="./index.html" class="nav__menu__items__list-item--link"
+                >acasă</a
+              >
+            </li>
+            <li class="nav__menu__items__list-item">
+              <a href="./despre.html" class="nav__menu__items__list-item--link"
+                >despre</a
+              >
+            </li>
+            <li class="nav__menu__items__list-item">
+              <a href="./galerie.html" class="nav__menu__items__list-item--link"
+                >galerie</a
+              >
+            </li>
+            <li class="nav__menu__items__list-item">
+              <a href="./contact.html" class="nav__menu__items__list-item--link"
+                >contact</a
+              >
+            </li>
+          </ul>
+          <div class="nav__menu__social">
+            <a
+              class="nav__menu__social--link"
+              href="https://wa.me/40770839160"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp-square"></i
+            ></a>
+            <a
+              class="nav__menu__social--link"
+              href="https://www.facebook.com/EDC-Electro-Design-Concept-107832304933785/?ref=py_c"
+              target="_blank"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a
+              class="nav__menu__social--link"
+              href="https://www.instagram.com/electrodesignconcept/?hl=en"
+              target="_blank"
+            >
+              <i class="fab fa-instagram-square"></i
+            ></a>
+          </div>
         </div>
       </nav>
     </header>
     <!-- END OF NAVIGATION -->
     <!-- MAIN SITE SECTION -->
     <main>
-      <!-- PRELOADER -->
-      <!-- <div class="preloader">
-        <img
-          src="./src/preloader.gif"
-          alt="preloader"
-          class="preloader__item"
-        />
-      </div> -->
       <!-- VIDEO -->
       <video class="video-container" muted autoplay loop>
         <source src="./src/video_lightbulb_compressed.mp4" type="video/mp4" />
       </video>
-      <h1 class="welcome-header">EDC ELECTRIC</h1>
+      <div class="headers">
+        <h1 class="welcome-header">ELEXSIS ELECTRIC</h1>
+      </div>
     </main>
     <!-- END OF MAIN SITE SECTION -->
     <!-- FOOTER -->
     <footer>
       <p>
-        copyright &copy; EDC instalatii electrice
+        copyright &copy; elexsis electric
         <span id="date">XXXX</span>
       </p>
     </footer>
     <!-- END OF FOOTER -->
   </body>
-  <script type="module" src="./scripts/app.js"></script>
 </html>
